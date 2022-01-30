@@ -1,9 +1,9 @@
 {
   "name": "reacttemplate",
   "version": "1.0.0",
-  "description": "",
+  "description": "React template is a template use to create a react app from scratch without CRA",
   "main": "index.js",
-  "keywords": [],
+  "keywords": ["react"],
   "author": "",
   "license": "ISC",
   "homepage": "https://github.com/quentinlao/reactTemplate#readme",
