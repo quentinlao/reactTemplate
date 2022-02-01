@@ -1,22 +1,40 @@
 const HtmlWebPackPlugin = require('html-webpack-plugin');
+
+require('dotenv').config()
+
 const htmlPlugin = new HtmlWebPackPlugin({
- template: './src/index.html',
- filename: './index.html'
+  template: './src/index.html',
+  filename: './index.html'
 });
+
+const {
+  PORT: port
+} = process.env
+
+const devServer = {
+  port,
+  open: true
+}
+
 module.exports = {
-mode: 'development',
+  mode: 'development',
+  entry: './src/index.tsx',
   module: {
-    rules: [{
-   test: /\.js$/,
-   exclude: /node_modules/,
-   use: {
-     loader: 'babel-loader'
-   }
- },
-  {
-   test: /\.css$/,
-   use: ['style-loader', 'css-loader']
-  }
-]},
- plugins: [htmlPlugin]
+    rules: [
+      {
+        test: /\.(ts|tsx)$/,
+        exclude: /node_modules/,
+        resolve: {
+          extensions: ['.ts', '.tsx', '.js', '.json'],
+        },
+        use: 'ts-loader',
+      },
+      {
+          test: /\.css$/,
+          use: ['style-loader', 'css-loader']
+      }
+    ]
+  },
+  plugins: [htmlPlugin],
+  devServer
 };
