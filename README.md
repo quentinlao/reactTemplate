@@ -18,12 +18,24 @@ React template is designed for minimum configuration and **you can use all you n
 -   Babel JS compiler ECMAScript 2015+ [babel](https://babeljs.io/docs/en/) (arrow function, and so on).
 -   Google TS stylesheet [google TS stylesheet](https://google.github.io/styleguide/tsguide.html).
 -   Prettier [prettier](https://prettier.io/) configuration with VScode
--   ESlint [ESlint](https://eslint.org/) fix auto config VScode
+-   ESlint [ESlint](https://eslint.org/) linter fix auto config VScode
 -   Jest [Jest](https://jestjs.io/fr/) unit test
 -   Cypress [Cypress](https://www.cypress.io/) end to end testing (features workflow)
 -   Mochawesome report cypress HTML and NYC coverage report
 
 You can use this minimun configuration to start a clean project, test it and improve it
+
+## Installation
+
+VSCODE extensions
+
+-   Prettier
+
+```
+ Config path prettier user VSCODE : .prettierrc.json
+```
+
+-   ESlint
 
 ## Documentation
 
