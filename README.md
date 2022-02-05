@@ -11,7 +11,7 @@ React template is a template use to create a react app from scratch without CRA.
 
 React template is designed for minimum configuration and **you can use all you need**:
 
--   React Api 16 Hooks [React hooks](https://fr.reactjs.org/docs/hooks-intro.html).
+-   React API 17 with Hooks [React hooks](https://fr.reactjs.org/docs/hooks-intro.html).
 -   Typescript [TS](https://www.typescriptlang.org/).
 -   Yarn package manager [yarn](https://yarnpkg.com/).
 -   Webpack bundler [webpack](https://webpack.js.org/).
@@ -36,6 +36,14 @@ VSCODE extensions
 ```
 
 -   ESlint
+
+## Project structure
+
+| File or folder     | Description                                                                                        |
+| ------------------ | -------------------------------------------------------------------------------------------------- |
+| `src/index.tsx`    | The entry file. This is where we import babel polyfills and render the App into the root DOM node. |
+| `src/index.html`   | The only HTML file in our App. All scripts and styles will be injected here by Webpack.            |
+| `src/view/App.tsx` | Main application routes, components that need to be mounted at all times                           |
 
 ## Documentation
 
@@ -68,3 +76,5 @@ ReactDOM.render(
 [Quentin](https://github.com/quentinlao/)
 
 ### License
+
+[MIT](https://opensource.org/licenses/MIT)
