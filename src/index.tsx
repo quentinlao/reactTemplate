@@ -1,7 +1,11 @@
 import ReactDOM from 'react-dom';
 import React from 'react';
+import { forceRenderStyles } from 'typestyle';
+
+import { HelloWorldPage } from './pages/HelloWorldPage';
 const App = (): JSX.Element => {
-    return <h1>React App template</h1>;
+    return <HelloWorldPage />;
 };
 
 ReactDOM.render(<App />, document.getElementById('app'));
+forceRenderStyles();

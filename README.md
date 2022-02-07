@@ -13,6 +13,7 @@ React template is designed for minimum configuration and **you can use all you n
 
 -   React API 17 with Hooks [React hooks](https://fr.reactjs.org/docs/hooks-intro.html).
 -   Typescript [TS](https://www.typescriptlang.org/).
+-   Standard CSS (CSS-loader, style-loader) this project allow you to choose your standard (inline, styled-components typestyle,css modules, preprocessors SASS/LESS)
 -   Yarn package manager [yarn](https://yarnpkg.com/).
 -   Webpack bundler [webpack](https://webpack.js.org/).
 -   Babel JS compiler ECMAScript 2015+ [babel](https://babeljs.io/docs/en/) (arrow function, and so on).
@@ -39,11 +40,17 @@ VSCODE extensions
 
 ## Project structure
 
-| File or folder     | Description                                                                                        |
-| ------------------ | -------------------------------------------------------------------------------------------------- |
-| `src/index.tsx`    | The entry file. This is where we import babel polyfills and render the App into the root DOM node. |
-| `src/index.html`   | The only HTML file in our App. All scripts and styles will be injected here by Webpack.            |
-| `src/view/App.tsx` | Main application routes, components that need to be mounted at all times                           |
+| File or folder      | Description                                                                                        |
+| ------------------- | -------------------------------------------------------------------------------------------------- |
+| `src/index.tsx`     | The entry file. This is where we import babel polyfills and render the App into the root DOM node. |
+| `src/index.html`    | The only HTML file in our App. All scripts and styles will be injected here by Webpack.            |
+| `src/assets/**`     | All the static assets exported to index.tsx                                                        |
+| `src/api/**`        | Services API for managing all api requests, all data requests and response data                    |
+| `src/pages/**`      | Core application                                                                                   |
+| `src/pages/App.tsx` | Main application routes, components that need to be mounted at all times                           |
+| `src/components/**` | Directory use for independant components reusable                                                  |
+| `src/types/**`      | Interface use to define Model structures                                                           |
+| `src/utils/**`      | All the utility, helpers, constants and enums that can be used across the application              |
 
 ## Documentation
 
