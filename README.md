@@ -23,6 +23,8 @@ React template is designed for minimum configuration and **you can use all you n
 -   Jest [Jest](https://jestjs.io/fr/) unit test
 -   Cypress [Cypress](https://www.cypress.io/) end to end testing (features workflow)
 -   Mochawesome report cypress HTML and NYC coverage report
+-   Axios for request HTTP handling data
+-   dotenv to configure .env
 
 You can use this minimun configuration to start a clean project, test it and improve it
 
@@ -51,32 +53,6 @@ VSCODE extensions
 | `src/components/**` | Directory use for independant components reusable                                                  |
 | `src/types/**`      | Interface use to define Model structures                                                           |
 | `src/utils/**`      | All the utility, helpers, constants and enums that can be used across the application              |
-
-## Documentation
-
-You can complete this README for your project here
-
--   [Example subject job interview](https://reactjs.org/tutorial/tutorial.html)
--   Constraint : X hours
-
-## Examples of title
-
-Here is an example of quoting code to explain :
-
-```tsx
-type IHelloMessage {
-  name: string;
-}
-
-const HelloMessage = (props: IHelloMessage) => {
-  return <div>Hello {props.name}</div>;
-}
-
-ReactDOM.render(
-  <HelloMessage name="Taylor" />,
-  document.getElementById('container')
-);
-```
 
 ## Contributor
 

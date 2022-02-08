@@ -10,5 +10,6 @@
         "target": "esnext",
         "plugins": [{ "name": "typescript-plugin-css-modules" }]
     },
+    "include": ["./src/**/*"],
     "exclude": ["node_modules"]
 }
