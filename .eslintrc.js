@@ -21,5 +21,10 @@ module.exports = {
         'react/jsx-uses-react': 'off',
         'react/react-in-jsx-scope': 'off',
     },
-    ignorePatterns: ['**/node_modules/**', '**/public/**'],
+    ignorePatterns: [
+        '**/node_modules/**',
+        '**/public/**',
+        '**/dist/**',
+        '**/build/**',
+    ],
 };
