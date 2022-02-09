@@ -26,3 +26,4 @@ chrome-user-data
 *.swp
 *.swo
 .env
+.nyc_output/

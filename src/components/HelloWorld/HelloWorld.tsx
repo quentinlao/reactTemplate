@@ -9,7 +9,7 @@ interface HelloWorldProps extends HelloWorldInterface {
 export const HelloWorld = (props: HelloWorldProps): JSX.Element => {
     const { name, title, description } = props;
     return (
-        <div className="helloWorldContainer">
+        <div id="helloWorldId" className="helloWorldContainer">
             <img src={logo} height="100" />
             <h1>
                 {title}, {name} !

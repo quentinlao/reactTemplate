@@ -42,7 +42,10 @@
         "@types/node": "^17.0.14",
         "@types/react": "^17.0.38",
         "@types/react-dom": "^17.0.11",
+        "@cypress/code-coverage": "^3.9.10",
+        "@cypress/instrument-cra": "^1.4.0",
         "axios": "^0.25.0",
+        "cypress": "^9.4.1",
         "file-loader": "^6.2.0",
         "react": "^17.0.2",
         "react-dom": "^17.0.2",
@@ -56,9 +59,11 @@
         }
     },
     "scripts": {
-        "test": "jest",
         "start": "webpack serve --config webpack.config.js",
-        "build": "webpack --mode production"
+        "build": "webpack --mode production",
+        "cypress:open": "cypress open",
+        "it": "cypress run",
+        "ut": "jest --coverage"
     },
     "proxy": "http://localhost:9292"
 }
