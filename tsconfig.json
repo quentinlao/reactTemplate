@@ -1,13 +1,16 @@
 {
     "compilerOptions": {
         "esModuleInterop": true,
-        "jsx": "react",
+        // React 17 production
+        "jsx": "react-jsx",
         "module": "esnext",
         "moduleResolution": "node",
         "lib": ["dom", "esnext"],
         "strict": true,
         "sourceMap": true,
-        "target": "esnext"
+        "target": "esnext",
+        "plugins": [{ "name": "typescript-plugin-css-modules" }]
     },
+    "include": ["./src/**/*"],
     "exclude": ["node_modules"]
 }
