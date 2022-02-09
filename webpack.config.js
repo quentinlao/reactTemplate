@@ -1,9 +1,11 @@
+const path = require('path');
+
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 
 require('dotenv').config();
 
 const htmlPlugin = new HtmlWebPackPlugin({
-    template: './src/index.html',
+    template: path.resolve('./src/index.html'),
     filename: './index.html',
 });
 
@@ -29,7 +31,7 @@ module.exports = {
             },
             {
                 test: /\.css$/,
-                use: ['style-loader', 'css-loader'],
+                use: [{ loader: 'style-loader' }, { loader: 'css-loader' }],
             },
             {
                 test: /\.(gif|svg|jpg|png)$/,
@@ -38,5 +40,10 @@ module.exports = {
         ],
     },
     plugins: [htmlPlugin],
+    output: {
+        path: path.resolve(__dirname, 'build'),
+        publicPath: '/',
+        filename: 'bundle.js',
+    },
     devServer,
 };

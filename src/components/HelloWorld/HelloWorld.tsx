@@ -1,4 +1,3 @@
-import React from 'react';
 import './HelloWorld.css';
 import logo from '../../assets/react.svg';
 import { HelloWorldInterface } from '../../types';

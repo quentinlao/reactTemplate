@@ -1,13 +1,14 @@
-import React from 'react';
+import { useState, useEffect } from 'react';
 import { HelloWorld } from '../components/HelloWorld/HelloWorld';
 import HelloWorldService from '../api/helloworld.service';
 import { HelloWorldInterface } from '../types';
+
 export const HelloWorldPage = (): JSX.Element => {
-    const [data, setData] = React.useState<HelloWorldInterface>({
+    const [data, setData] = useState<HelloWorldInterface>({
         title: '',
         description: '',
     });
-    React.useEffect(() => {
+    useEffect(() => {
         HelloWorldService.getHelloWorld().then(
             (response: HelloWorldInterface) => {
                 setData(response);
