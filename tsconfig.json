@@ -5,17 +5,13 @@
         "jsx": "react-jsx",
         "module": "esnext",
         "moduleResolution": "node",
-        "module": "commonjs",
         "lib": ["dom", "esnext"],
         "strict": true,
         "sourceMap": true,
         "target": "esnext",
         "plugins": [{ "name": "typescript-plugin-css-modules" }],
         "baseUrl": ".",
-        "types": ["jest"],
-        "paths": {
-            "@/*": ["./*"]
-        }
+        "types": ["jest", "cypress"]
     },
     "include": ["./src/**/*"],
     "exclude": ["node_modules"]

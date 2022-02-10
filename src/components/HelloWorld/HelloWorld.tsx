@@ -15,7 +15,7 @@ export const HelloWorld = (props: HelloWorldProps): JSX.Element => {
                 {title}, {name} !
             </h1>
 
-            <p>{description}</p>
+            <p id="descriptionId">{description}</p>
         </div>
     );
 };

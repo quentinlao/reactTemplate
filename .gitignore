@@ -27,3 +27,5 @@ chrome-user-data
 *.swo
 .env
 .nyc_output/
+cypress-coverage/
+jest-coverage/

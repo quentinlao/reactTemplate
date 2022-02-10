@@ -39,6 +39,10 @@ module.exports = {
             },
         ],
     },
+    resolve: {
+        extensions: ['.ts', '.tsx', '.js', '.json'],
+    },
+
     plugins: [htmlPlugin],
     output: {
         path: path.resolve(__dirname, 'build'),
