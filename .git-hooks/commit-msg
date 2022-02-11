@@ -45,7 +45,7 @@ else
 	echo "/!\ Bad commit, check format."
 	echo "commit message content :"
 	echo $fileContent
-	echo "Commit message format must match regex"
+	echo "Commit message format must match regex :"
 	echo $regex
 	exit 1
 fi
