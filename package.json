@@ -28,15 +28,18 @@
         "babel-preset-react": "^6.24.1",
         "chai": "^4.3.6",
         "css-loader": "^6.5.1",
-        "cypress": "^9.4.1",
+        "cypress": "9.5.0",
         "dotenv": "^15.0.0",
         "eslint": "^8.8.0",
         "eslint-plugin-react": "^7.28.0",
         "eslint-plugin-react-hooks": "^4.3.0",
         "html-webpack-plugin": "^5.5.0",
+        "istanbul": "^0.4.5",
         "jest": "^27.5.1",
+        "nyc": "^13.3.0",
         "prettier": "2.5.1",
         "react-test-renderer": "^17.0.2",
+        "source-map-support": "^0.5.21",
         "style-loader": "^3.3.1",
         "ts-loader": "^9.2.6",
         "webpack": "^5.68.0",
@@ -69,10 +72,15 @@
     "nyc": {
         "extends": "@istanbuljs/nyc-config-typescript",
         "report-dir": "cypress-coverage",
+        "extensions": [
+            "js",
+            "jsx",
+            "ts",
+            "tsx"
+        ],
         "all": true,
-        "include": [
-            "src/**"
-        ]
+        "compact": false,
+        "excludeAfterRemap": false
     },
     "scripts": {
         "start": "webpack serve --config webpack.config.js",

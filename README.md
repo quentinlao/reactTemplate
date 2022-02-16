@@ -40,19 +40,57 @@ VSCODE extensions
 
 -   ESlint
 
+# Commands
+
+-   Starting project PORT=8082, change `.env` with PORT={PORT}
+
+```
+yarn start
+```
+
+-   Build project in one package for cloud provider
+
+```
+yarn build
+```
+
+-   Unit test created in jest and coverage in folder `jest-coverage`
+
+```
+yarn ut
+```
+
+-   Integration test for working flow test
+
+```
+yarn it
+```
+
+-   Starting cypress to start specific it
+
+```
+yarn cypress:open
+```
+
 ## Project structure
 
-| File or folder      | Description                                                                                        |
-| ------------------- | -------------------------------------------------------------------------------------------------- |
-| `src/index.tsx`     | The entry file. This is where we import babel polyfills and render the App into the root DOM node. |
-| `src/index.html`    | The only HTML file in our App. All scripts and styles will be injected here by Webpack.            |
-| `src/assets/**`     | All the static assets exported to index.tsx                                                        |
-| `src/api/**`        | Services API for managing all api requests, all data requests and response data                    |
-| `src/pages/**`      | Core application                                                                                   |
-| `src/pages/App.tsx` | Main application routes, components that need to be mounted at all times                           |
-| `src/components/**` | Directory use for independant components reusable                                                  |
-| `src/types/**`      | Interface use to define Model structures                                                           |
-| `src/utils/**`      | All the utility, helpers, constants and enums that can be used across the application              |
+| File or folder           | Description                                                                                        |
+| ------------------------ | -------------------------------------------------------------------------------------------------- |
+| `src/index.tsx`          | The entry file. This is where we import babel polyfills and render the App into the root DOM node. |
+| `src/index.html`         | The only HTML file in our App. All scripts and styles will be injected here by Webpack.            |
+| `src/assets/**`          | All the static assets exported to index.tsx                                                        |
+| `src/api/**`             | Services API for managing all api requests, all data requests and response data                    |
+| `src/pages/**`           | Core application                                                                                   |
+| `src/pages/App.tsx`      | Main application routes, components that need to be mounted at all times                           |
+| `src/components/**`      | Directory use for independant components reusable                                                  |
+| `src/types/**`           | Interface use to define Model structures                                                           |
+| `src/utils/**`           | All the utility, helpers, constants and enums that can be used across the application              |
+| `cypress-coverage/**`    | Lcov and html report cypress for integration test                                                  |
+| `cypress/**`             | Cypress configuration for adding plugings, instruments coverage and testing                        |
+| `cypress/integration/**` | Integration test folder                                                                            |
+| `jest-coverage/**`       | Lcov and html report jest for unit test                                                            |
+| `./jest/**`              | Jest configuration needed for files                                                                |
+| `src/components/**`      | Jest unit tests files in component                                                                 |
 
 ## Contributor
 
