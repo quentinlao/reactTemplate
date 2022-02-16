@@ -70,5 +70,6 @@ ReactDOM.render(
 ## Contributor
 
 [Quentin](https://github.com/quentinlao/)
+[Alan](https://github.com/alanlachkar)
 
 ### License

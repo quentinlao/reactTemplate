@@ -10,7 +10,7 @@ test "" = "$(grep '^Signed-off-by: ' "$1" |
 #
 # Custom hook
 # Check that the commit message content fit to the regex
-# [<project_name>/<branch_name>/<package_version>]: <commit_message>
+# first word need to be one of these : feat, fix, test or doc
 #
 
 # Given data to the file
