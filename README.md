@@ -11,8 +11,9 @@ React template is a template use to create a react app from scratch without CRA.
 
 React template is designed for minimum configuration and **you can use all you need**:
 
--   React Api 16 Hooks [React hooks](https://fr.reactjs.org/docs/hooks-intro.html).
+-   React API 17 with Hooks [React hooks](https://fr.reactjs.org/docs/hooks-intro.html).
 -   Typescript [TS](https://www.typescriptlang.org/).
+-   Standard CSS (CSS-loader, style-loader) this project allow you to choose your standard (inline, styled-components typestyle,css modules, preprocessors SASS/LESS)
 -   Yarn package manager [yarn](https://yarnpkg.com/).
 -   Webpack bundler [webpack](https://webpack.js.org/).
 -   Babel JS compiler ECMAScript 2015+ [babel](https://babeljs.io/docs/en/) (arrow function, and so on).
@@ -22,6 +23,8 @@ React template is designed for minimum configuration and **you can use all you n
 -   Jest [Jest](https://jestjs.io/fr/) unit test
 -   Cypress [Cypress](https://www.cypress.io/) end to end testing (features workflow)
 -   Mochawesome report cypress HTML and NYC coverage report
+-   Axios for request HTTP handling data
+-   dotenv to configure .env
 
 You can use this minimun configuration to start a clean project, test it and improve it
 
@@ -41,31 +44,19 @@ VSCODE extensions
 
 Run the .bat script in `<GIT_DIRECTORY>/.git-hooks` to instanciate the git hooks configuration on your project.
 
-## Documentation
+## Project structure
 
-You can complete this README for your project here
-
--   [Example subject job interview](https://reactjs.org/tutorial/tutorial.html)
--   Constraint : X hours
-
-## Examples of title
-
-Here is an example of quoting code to explain :
-
-```tsx
-type IHelloMessage {
-  name: string;
-}
-
-const HelloMessage = (props: IHelloMessage) => {
-  return <div>Hello {props.name}</div>;
-}
-
-ReactDOM.render(
-  <HelloMessage name="Taylor" />,
-  document.getElementById('container')
-);
-```
+| File or folder      | Description                                                                                        |
+| ------------------- | -------------------------------------------------------------------------------------------------- |
+| `src/index.tsx`     | The entry file. This is where we import babel polyfills and render the App into the root DOM node. |
+| `src/index.html`    | The only HTML file in our App. All scripts and styles will be injected here by Webpack.            |
+| `src/assets/**`     | All the static assets exported to index.tsx                                                        |
+| `src/api/**`        | Services API for managing all api requests, all data requests and response data                    |
+| `src/pages/**`      | Core application                                                                                   |
+| `src/pages/App.tsx` | Main application routes, components that need to be mounted at all times                           |
+| `src/components/**` | Directory use for independant components reusable                                                  |
+| `src/types/**`      | Interface use to define Model structures                                                           |
+| `src/utils/**`      | All the utility, helpers, constants and enums that can be used across the application              |
 
 ## Contributor
 
@@ -73,3 +64,5 @@ ReactDOM.render(
 [Alan](https://github.com/alanlachkar)
 
 ### License
+
+[MIT](https://opensource.org/licenses/MIT)
