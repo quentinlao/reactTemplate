@@ -1,0 +1,36 @@
+#!/bin/sh
+# This example catches duplicate Signed-off-by lines.
+
+test "" = "$(grep '^Signed-off-by: ' "$1" |
+	 sort | uniq -c | sed -e '/^[ 	]*1[ 	]/d')" || {
+	echo >&2 Duplicate Signed-off-by lines.
+	exit 1
+}
+
+#
+# Custom hook
+# Check that the commit message content fit to the regex
+# first word need to be one of these : feat, fix, test or doc
+#
+
+# Given data to the file
+COMMIT_MSG_PATH=$1
+fileContent="$(cat $COMMIT_MSG_PATH)"
+
+# Regex patterns
+regex="^feat|fix|test|doc\s?\n?[a-zA-Z0-9_]+"
+
+# If file content doesn't match with regex then abort the commit
+if [[ $fileContent =~ $regex ]] 
+then
+	echo "Nice commit! "
+	echo "file content : $fileContent"
+else
+	echo "/!\ Bad commit, check format."
+	echo "commit message content :"
+	echo $fileContent
+	echo "Commit message format must match regex :"
+	echo $regex
+	exit 1
+fi
+exit 0

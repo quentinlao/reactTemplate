@@ -40,6 +40,10 @@ VSCODE extensions
 
 -   ESlint
 
+-   Git hooks
+
+Run the .bat script in `<GIT_DIRECTORY>/.git-hooks` to instanciate the git hooks configuration on your project.
+
 ## Project structure
 
 | File or folder      | Description                                                                                        |
@@ -57,6 +61,7 @@ VSCODE extensions
 ## Contributor
 
 [Quentin](https://github.com/quentinlao/)
+[Alan](https://github.com/alanlachkar)
 
 ### License
 
