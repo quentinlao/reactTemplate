@@ -1,0 +1,1 @@
+COPY /-Y commit-msg ..\.git\hooks

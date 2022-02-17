@@ -40,6 +40,10 @@ VSCODE extensions
 
 -   ESlint
 
+-   Git hooks
+
+Run the .bat script in `<GIT_DIRECTORY>/.git-hooks` to instanciate the git hooks configuration on your project.
+
 # Commands
 
 -   Starting project PORT=8082, change `.env` with PORT={PORT}
@@ -95,6 +99,7 @@ yarn cypress:open
 ## Contributor
 
 [Quentin](https://github.com/quentinlao/)
+[Alan](https://github.com/alanlachkar)
 
 ### License
 
