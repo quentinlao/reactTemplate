@@ -34,9 +34,7 @@ VSCODE extensions
 
 -   Prettier
 
-```
- Config path prettier user VSCODE : .prettierrc.json
-```
+Config path prettier user VSCODE in settings.json: `.prettierrc.json`
 
 -   ESlint
 
