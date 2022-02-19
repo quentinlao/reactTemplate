@@ -19,3 +19,5 @@ export const HelloWorld = (props: HelloWorldProps): JSX.Element => {
         </div>
     );
 };
+
+export const sumFunction = (a: number, b: number) => a + b;

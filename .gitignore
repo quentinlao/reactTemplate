@@ -26,6 +26,8 @@ chrome-user-data
 *.swp
 *.swo
 .env
+
+# Coverage elements
 .nyc_output/
-cypress-coverage/
-jest-coverage/
+.coverage/
+coverage.json

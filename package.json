@@ -63,7 +63,7 @@
             "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/.jest/fileMock.js",
             "\\.(css|less)$": "<rootDir>/.jest/styleMock.js"
         },
-        "coverageDirectory": "jest-coverage",
+        "coverageDirectory": ".coverage/jest-coverage",
         "collectCoverage": true,
         "testPathIgnorePatterns": [
             "<rootDir>/cypress/"
@@ -71,7 +71,7 @@
     },
     "nyc": {
         "extends": "@istanbuljs/nyc-config-typescript",
-        "report-dir": "cypress-coverage",
+        "report-dir": ".coverage/cypress-coverage",
         "extensions": [
             "js",
             "jsx",
@@ -83,11 +83,14 @@
         "excludeAfterRemap": false
     },
     "scripts": {
-        "start": "webpack serve --config webpack.config.js",
+        "start": "set PORT=8082 && webpack serve --config webpack.config.js",
         "build": "webpack --mode production",
-        "cypress:open": "cypress open",
+        "cy:open": "cypress open",
         "it": "cypress run",
-        "ut": "jest --coverage"
+        "ut": "jest --coverage",
+        "reports:move": "cp .coverage/cypress-coverage/coverage-final.json .coverage/coverage-final-from-cypress.json && cp .coverage/jest-coverage/coverage-final.json .coverage/coverage-final-from-jest.json ",
+        "reports:merge": "npx nyc merge .coverage coverage.json && mv coverage.json .nyc_output/out.json",
+        "reports:combined": "npx nyc report --reporter lcov --reporter text --report-dir .coverage/combined"
     },
     "proxy": "http://localhost:9292"
 }
