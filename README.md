@@ -28,9 +28,9 @@ React template is designed for minimum configuration and **you can use all you n
 
 You can use this minimun configuration to start a clean project, test it and improve it
 
-## Installation
+## Pre installation (toolings)
 
-VSCODE extensions
+VSCODE extensions used to develop faster
 
 -   Prettier
 
@@ -38,13 +38,25 @@ Config path prettier user VSCODE in settings.json: `.prettierrc.json`
 
 -   ESlint
 
+This plugin is used to help you to develop and add rules to stylesheet your coding style.
+
 -   Git hooks
 
 Run the .bat script in `<GIT_DIRECTORY>/.git-hooks` to instanciate the git hooks configuration on your project.
 
-# Commands
+Configuration Windows or Linux
 
--   Starting project PORT=8082, change `.env` with PORT={PORT}
+-   `package.json`
+    Replace windows commands with linux commands
+    | Windows | Linux|
+    |---------|------|
+    | copy | cp |
+    | mv | move |
+    | backslash \\\ |path /|
+
+# Installation
+
+-   Default project `PORT=8082`, change `.env` with `PORT={your_port}` or setenv `PORT` in `package.json` default port
 
 ```
 yarn start
@@ -56,13 +68,13 @@ yarn start
 yarn build
 ```
 
--   Unit test created in jest and coverage in folder `jest-coverage`
+-   Unit test created in jest and coverage in folder `.coverage/jest-coverage`
 
 ```
 yarn ut
 ```
 
--   Integration test for working flow test
+-   Integration test for working flow test in folder `.coverage/cypress-coverage`
 
 ```
 yarn it
@@ -71,28 +83,53 @@ yarn it
 -   Starting cypress to start specific it
 
 ```
-yarn cypress:open
+yarn cy:open
+```
+
+-   Copy in folder `.coverage` reports UT and IT
+
+```
+yarn reports:move
+```
+
+-   Merge reports with Nyc
+
+```
+yarn reports:merge
+```
+
+-   Combined reports and create new report in `.coverage/combined`
+
+```
+yarn reports:combined
+```
+
+-   Execute all coverages commands IT/UT and move, merge and combined
+
+```
+yarn reports:coverage
 ```
 
 ## Project structure
 
-| File or folder           | Description                                                                                        |
-| ------------------------ | -------------------------------------------------------------------------------------------------- |
-| `src/index.tsx`          | The entry file. This is where we import babel polyfills and render the App into the root DOM node. |
-| `src/index.html`         | The only HTML file in our App. All scripts and styles will be injected here by Webpack.            |
-| `src/assets/**`          | All the static assets exported to index.tsx                                                        |
-| `src/api/**`             | Services API for managing all api requests, all data requests and response data                    |
-| `src/pages/**`           | Core application                                                                                   |
-| `src/pages/App.tsx`      | Main application routes, components that need to be mounted at all times                           |
-| `src/components/**`      | Directory use for independant components reusable                                                  |
-| `src/types/**`           | Interface use to define Model structures                                                           |
-| `src/utils/**`           | All the utility, helpers, constants and enums that can be used across the application              |
-| `cypress-coverage/**`    | Lcov and html report cypress for integration test                                                  |
-| `cypress/**`             | Cypress configuration for adding plugings, instruments coverage and testing                        |
-| `cypress/integration/**` | Integration test folder                                                                            |
-| `jest-coverage/**`       | Lcov and html report jest for unit test                                                            |
-| `./jest/**`              | Jest configuration needed for files                                                                |
-| `src/components/**`      | Jest unit tests files in component                                                                 |
+| File or folder                  | Description                                                                                        |
+| ------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `src/index.tsx`                 | The entry file. This is where we import babel polyfills and render the App into the root DOM node. |
+| `src/index.html`                | The only HTML file in our App. All scripts and styles will be injected here by Webpack.            |
+| `src/assets/**`                 | All the static assets exported to index.tsx                                                        |
+| `src/api/**`                    | Services API for managing all api requests, all data requests and response data                    |
+| `src/pages/**`                  | Core application                                                                                   |
+| `src/pages/App.tsx`             | Main application routes, components that need to be mounted at all times                           |
+| `src/components/**`             | Directory use for independant components reusable                                                  |
+| `src/types/**`                  | Interface use to define Model structures                                                           |
+| `src/utils/**`                  | All the utility, helpers, constants and enums that can be used across the application              |
+| `.coverage/cypress-coverage/**` | Lcov and html report cypress for integration test                                                  |
+| `cypress/**`                    | Cypress configuration for adding plugings, instruments coverage and testing                        |
+| `cypress/integration/**`        | Integration test folder                                                                            |
+| `.coverage/jest-coverage/**`    | Lcov and html report jest for unit test                                                            |
+| `.coverage/combined/**`         | Coverage IT and UT                                                                                 |
+| `./jest/**`                     | Jest configuration needed for files                                                                |
+| `src/components/**`             | Jest unit tests files in component                                                                 |
 
 ## Contributor
 
