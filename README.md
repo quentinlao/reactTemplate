@@ -48,11 +48,12 @@ Configuration Windows or Linux
 
 -   `package.json`
     Replace windows commands with linux commands
-    | Windows | Linux|
-    |---------|------|
-    | copy | cp |
-    | mv | move |
-    | backslash \\\ |path /|
+    | Windows | Linux | Explanation |
+    |---------|-------|-------------|
+    | copy | cp | Copy element(s) |
+    | mv | move | Move element(s) |
+    | del | rm | Delete element(s) |
+    | backslash \\\ |path /| Separation between folder |
 
 # Installation
 
