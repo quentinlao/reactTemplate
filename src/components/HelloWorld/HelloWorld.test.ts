@@ -7,6 +7,9 @@ import { getByText } from '@testing-library/dom';
 
 afterEach(cleanup);
 
+/**
+ * uncomment code to cover component hello world
+ */
 let container: HTMLElement;
 describe('HelloWorld component suites tests', () => {
     beforeEach(() => {

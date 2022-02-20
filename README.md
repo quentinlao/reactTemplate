@@ -44,7 +44,8 @@ This plugin is used to help you to develop and add rules to stylesheet your codi
 
 Run the .bat script in `<GIT_DIRECTORY>/.git-hooks` to instanciate the git hooks configuration on your project.
 
-Configuration Windows or Linux
+Configuration Windows or Linux (use powershell or bash)
+Recommendation use VSCode bash = default configuration
 
 -   `package.json`
     Replace windows commands with linux commands

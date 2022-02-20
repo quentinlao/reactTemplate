@@ -2,6 +2,8 @@ import './HelloWorld.css';
 import logo from '../../assets/react.svg';
 import { HelloWorldInterface } from '../../types';
 
+const HELLO_WORLD_ID = 'helloWorldId';
+const DESCRIPTION_ID = 'descriptionId';
 interface HelloWorldProps extends HelloWorldInterface {
     name: string;
 }
@@ -9,15 +11,15 @@ interface HelloWorldProps extends HelloWorldInterface {
 export const HelloWorld = (props: HelloWorldProps): JSX.Element => {
     const { name, title, description } = props;
     return (
-        <div id="helloWorldId" className="helloWorldContainer">
+        <div id={HELLO_WORLD_ID} className="helloWorldContainer">
             <img src={logo} height="100" />
             <h1>
                 {title}, {name} !
             </h1>
-
-            <p id="descriptionId">{description}</p>
+            <h2>Sum {sumFunction(1, 2)}</h2>
+            <p id={DESCRIPTION_ID}>{description}</p>
         </div>
     );
 };
 
-export const sumFunction = (a: number, b: number) => a + b;
+export const sumFunction = (a: number, b: number): number => a + b;

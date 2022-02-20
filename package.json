@@ -80,7 +80,13 @@
         ],
         "all": true,
         "compact": false,
-        "excludeAfterRemap": false
+        "excludeAfterRemap": false,
+        "exclude": [
+            "build",
+            "cypress/plugins",
+            "cypress/support",
+            "dist"
+        ]
     },
     "scripts": {
         "start": "set PORT=8082 && webpack serve --config webpack.config.js",
@@ -88,9 +94,9 @@
         "cy:open": "cypress open",
         "it": "cypress run",
         "ut": "jest --coverage",
-        "reports:move": "copy .coverage/cypress-coverage/coverage-final.json .coverage/coverage-final-from-cypress.json && copy .coverage/jest-coverage/coverage-final.json .coverage/coverage-final-from-jest.json",
+        "reports:move": "cp .coverage/cypress-coverage/coverage-final.json .coverage/coverage-final-from-cypress.json && cp .coverage/jest-coverage/coverage-final.json .coverage/coverage-final-from-jest.json",
         "reports:merge": "yarn reports:move && npx nyc merge .coverage coverage.json && move coverage.json .nyc_output/out.json",
-        "reports:combined": "npx nyc report --reporter lcov --reporter text --report-dir .coverage/combined del .coverage/coverage-final-from-cypress.json && del .coverage/coverage-final-from-jest.json",
+        "reports:combined": "npx nyc report --reporter lcov --reporter text --report-dir .coverage/combined rm .coverage/coverage-final-from-cypress.json && rm .coverage/coverage-final-from-jest.json",
         "reports:coverage": "yarn it && yarn ut && yarn reports:merge && yarn reports:combined"
     },
     "proxy": "http://localhost:9292"
