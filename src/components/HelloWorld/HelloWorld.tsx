@@ -17,7 +17,7 @@ export const HelloWorld = (props: HelloWorldProps): JSX.Element => {
                 {title}, {name} !
             </h1>
             <h2>Sum {sumFunction(1, 2)}</h2>
-            <p id={DESCRIPTION_ID}>{description}</p>
+            <p data-test-id={DESCRIPTION_ID}>{description}</p>
         </div>
     );
 };

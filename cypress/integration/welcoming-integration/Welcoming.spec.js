@@ -1,5 +1,7 @@
 /// <reference types="cypress" />
+
 import { expect } from 'chai';
+
 describe('Welcoming flow', () => {
     beforeEach(() => {
         cy.visit('/');
@@ -13,6 +15,9 @@ describe('Welcoming flow', () => {
         cy.title().should('include', 'React App template');
 
         cy.get('#helloWorldId').should('be.visible');
-        cy.get('#descriptionId').should('contain', 'Lorem ipsum');
+        cy.get('[data-test-id="descriptionId"]').should(
+            'contain',
+            'Lorem ipsum'
+        );
     });
 });
