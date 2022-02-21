@@ -1,5 +1,5 @@
 {
-    "name": "reacttemplate",
+    "name": "crt-skeleton",
     "version": "1.0.0",
     "description": "React template is a template use to create a react app from scratch without CRA",
     "main": "index.tsx",
