@@ -22,12 +22,16 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.(ts|tsx)$/,
+                test: /\.(ts|tsx|js)$/,
                 exclude: /node_modules/,
                 resolve: {
                     extensions: ['.ts', '.tsx', '.js', '.json'],
                 },
-                use: 'ts-loader',
+                use: [
+                    {
+                        loader: 'babel-loader',
+                    },
+                ],
             },
             {
                 test: /\.css$/,
@@ -39,6 +43,10 @@ module.exports = {
             },
         ],
     },
+    resolve: {
+        extensions: ['.ts', '.tsx', '.js', '.json'],
+    },
+
     plugins: [htmlPlugin],
     output: {
         path: path.resolve(__dirname, 'build'),

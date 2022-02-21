@@ -9,8 +9,10 @@
         "strict": true,
         "sourceMap": true,
         "target": "esnext",
-        "plugins": [{ "name": "typescript-plugin-css-modules" }]
+        "plugins": [{ "name": "typescript-plugin-css-modules" }],
+        "baseUrl": ".", // ./src to shorthen import
+        "types": ["jest", "cypress"]
     },
-    "include": ["./src/**/*"],
-    "exclude": ["node_modules"]
+    "exclude": ["node_modules"],
+    "include": ["src"]
 }
