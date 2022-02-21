@@ -1,48 +1,99 @@
 {
-    "name": "reacttemplate",
+    "name": "crt-skeleton",
     "version": "1.0.0",
     "description": "React template is a template use to create a react app from scratch without CRA",
     "main": "index.tsx",
     "keywords": [
         "react"
     ],
-    "author": "",
+    "author": "quentin",
     "license": "ISC",
     "homepage": "https://github.com/quentinlao/reactTemplate#readme",
     "devDependencies": {
-        "@babel/core": "^7.16.12",
+        "@babel/core": "^7.17.2",
         "@babel/plugin-proposal-class-properties": "^7.16.7",
+        "@babel/preset-env": "^7.16.11",
         "@babel/preset-react": "^7.16.7",
+        "@babel/preset-typescript": "^7.16.7",
+        "@cypress/code-coverage": "^3.9.12",
+        "@cypress/webpack-preprocessor": "^5.11.1",
+        "@testing-library/jest-dom": "^5.16.2",
+        "@testing-library/react": "^12.1.2",
+        "@types/chai": "^4.3.0",
+        "@types/jest": "^27.4.0",
         "@typescript-eslint/eslint-plugin": "^5.10.2",
         "@typescript-eslint/parser": "^5.10.2",
+        "@istanbuljs/nyc-config-typescript": "^1.0.2",
+        "babel-jest": "^27.5.1",
         "babel-loader": "^8.2.3",
         "babel-preset-react": "^6.24.1",
+        "babel-plugin-istanbul": "^6.1.1",
+        "chai": "^4.3.6",
         "css-loader": "^6.5.1",
+        "cypress": "9.5.0",
         "dotenv": "^15.0.0",
         "eslint": "^8.8.0",
         "eslint-plugin-react": "^7.28.0",
         "eslint-plugin-react-hooks": "^4.3.0",
         "html-webpack-plugin": "^5.5.0",
+        "jest": "^27.5.1",
+        "nyc": "^13.3.0",
         "prettier": "2.5.1",
         "style-loader": "^3.3.1",
-        "ts-loader": "^9.2.6",
         "webpack": "^5.68.0",
         "webpack-cli": "^4.9.2",
         "webpack-dev-server": "^4.7.3"
     },
     "dependencies": {
-        "@types/jest": "^27.4.0",
-        "@types/node": "^17.0.14",
         "@types/react": "^17.0.38",
         "@types/react-dom": "^17.0.11",
+        "axios": "^0.25.0",
+        "file-loader": "^6.2.0",
         "react": "^17.0.2",
         "react-dom": "^17.0.2",
         "typescript": "^4.5.5"
     },
+    "jest": {
+        "testEnvironment": "jsdom",
+        "moduleNameMapper": {
+            "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/.jest/fileMock.js",
+            "\\.(css|less)$": "<rootDir>/.jest/styleMock.js"
+        },
+        "coverageDirectory": ".coverage/jest-coverage",
+        "collectCoverage": true,
+        "testPathIgnorePatterns": [
+            "<rootDir>/cypress/"
+        ]
+    },
+    "nyc": {
+        "extends": "@istanbuljs/nyc-config-typescript",
+        "report-dir": ".coverage/cypress-coverage",
+        "extensions": [
+            "js",
+            "jsx",
+            "ts",
+            "tsx"
+        ],
+        "all": true,
+        "compact": false,
+        "excludeAfterRemap": false,
+        "exclude": [
+            "build",
+            "cypress/plugins",
+            "cypress/support",
+            "dist"
+        ]
+    },
     "scripts": {
-        "test": "echo Error: no test specified && exit 1",
-        "start": "webpack serve --config webpack.config.js",
-        "build": "webpack --mode production"
+        "start": "set PORT=8082 && webpack serve --config webpack.config.js",
+        "build": "webpack --mode production",
+        "cy:open": "cypress open",
+        "it": "cypress run",
+        "ut": "jest --coverage",
+        "reports:move": "cp .coverage/cypress-coverage/coverage-final.json .coverage/coverage-final-from-cypress.json && cp .coverage/jest-coverage/coverage-final.json .coverage/coverage-final-from-jest.json",
+        "reports:merge": "yarn reports:move && npx nyc merge .coverage coverage.json && move coverage.json .nyc_output/out.json",
+        "reports:combined": "npx nyc report --reporter lcov --reporter text --report-dir .coverage/combined && rm .coverage/coverage-final-from-cypress.json && rm .coverage/coverage-final-from-jest.json",
+        "reports:coverage": "yarn it && yarn ut && yarn reports:merge && yarn reports:combined"
     },
     "proxy": "http://localhost:9292"
 }

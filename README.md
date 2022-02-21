@@ -11,8 +11,9 @@ React template is a template use to create a react app from scratch without CRA.
 
 React template is designed for minimum configuration and **you can use all you need**:
 
--   React Api 16 Hooks [React hooks](https://fr.reactjs.org/docs/hooks-intro.html).
+-   React API 17 with Hooks [React hooks](https://fr.reactjs.org/docs/hooks-intro.html).
 -   Typescript [TS](https://www.typescriptlang.org/).
+-   Standard CSS (CSS-loader, style-loader) this project allow you to choose your standard (inline, styled-components typestyle,css modules, preprocessors SASS/LESS)
 -   Yarn package manager [yarn](https://yarnpkg.com/).
 -   Webpack bundler [webpack](https://webpack.js.org/).
 -   Babel JS compiler ECMAScript 2015+ [babel](https://babeljs.io/docs/en/) (arrow function, and so on).
@@ -22,49 +23,121 @@ React template is designed for minimum configuration and **you can use all you n
 -   Jest [Jest](https://jestjs.io/fr/) unit test
 -   Cypress [Cypress](https://www.cypress.io/) end to end testing (features workflow)
 -   Mochawesome report cypress HTML and NYC coverage report
+-   Axios for request HTTP handling data
+-   dotenv to configure .env
 
 You can use this minimun configuration to start a clean project, test it and improve it
 
-## Installation
+## Pre installation (toolings)
 
-VSCODE extensions
+VSCODE extensions used to develop faster
 
 -   Prettier
 
-```
- Config path prettier user VSCODE : .prettierrc.json
-```
+Config path prettier user VSCODE in settings.json: `.prettierrc.json`
 
 -   ESlint
 
-## Documentation
+This plugin is used to help you to develop and add rules to stylesheet your coding style.
 
-You can complete this README for your project here
+-   Git hooks
 
--   [Example subject job interview](https://reactjs.org/tutorial/tutorial.html)
--   Constraint : X hours
+Run the .bat script in `<GIT_DIRECTORY>/.git-hooks` to instanciate the git hooks configuration on your project.
 
-## Examples of title
+Configuration Windows or Linux (use powershell or bash)
+Recommendation use VSCode bash = default configuration
 
-Here is an example of quoting code to explain :
+-   `package.json`
+    Replace windows commands with linux commands
+    | Windows | Linux | Explanation |
+    |---------|-------|-------------|
+    | copy | cp | Copy element(s) |
+    | mv | move | Move element(s) |
+    | del | rm | Delete element(s) |
+    | backslash \\\ |path /| Separation between folder |
 
-```tsx
-type IHelloMessage {
-  name: string;
-}
+# Installation
 
-const HelloMessage = (props: IHelloMessage) => {
-  return <div>Hello {props.name}</div>;
-}
+-   Default project `PORT=8082`, change `.env` with `PORT={your_port}` or setenv `PORT` in `package.json` default port
 
-ReactDOM.render(
-  <HelloMessage name="Taylor" />,
-  document.getElementById('container')
-);
 ```
+yarn start
+```
+
+-   Build project in one package for cloud provider
+
+```
+yarn build
+```
+
+-   Unit test created in jest and coverage in folder `.coverage/jest-coverage`
+
+```
+yarn ut
+```
+
+-   Integration test for working flow test in folder `.coverage/cypress-coverage`
+
+```
+yarn it
+```
+
+-   Starting cypress to start specific it
+
+```
+yarn cy:open
+```
+
+-   Copy in folder `.coverage` reports UT and IT
+
+```
+yarn reports:move
+```
+
+-   Merge reports with Nyc
+
+```
+yarn reports:merge
+```
+
+-   Combined reports and create new report in `.coverage/combined`
+
+```
+yarn reports:combined
+```
+
+-   Execute all coverages commands IT/UT and move, merge and combined
+
+```
+yarn reports:coverage
+```
+
+## Project structure
+
+| File or folder                  | Description                                                                                        |
+| ------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `src/index.tsx`                 | The entry file. This is where we import babel polyfills and render the App into the root DOM node. |
+| `src/index.html`                | The only HTML file in our App. All scripts and styles will be injected here by Webpack.            |
+| `src/assets/**`                 | All the static assets exported to index.tsx                                                        |
+| `src/api/**`                    | Services API for managing all api requests, all data requests and response data                    |
+| `src/pages/**`                  | Core application                                                                                   |
+| `src/pages/App.tsx`             | Main application routes, components that need to be mounted at all times                           |
+| `src/components/**`             | Directory use for independant components reusable                                                  |
+| `src/types/**`                  | Interface use to define Model structures                                                           |
+| `src/utils/**`                  | All the utility, helpers, constants and enums that can be used across the application              |
+| `.coverage/cypress-coverage/**` | Lcov and html report cypress for integration test                                                  |
+| `cypress/**`                    | Cypress configuration for adding plugings, instruments coverage and testing                        |
+| `cypress/integration/**`        | Integration test folder                                                                            |
+| `.coverage/jest-coverage/**`    | Lcov and html report jest for unit test                                                            |
+| `.coverage/combined/**`         | Coverage IT and UT                                                                                 |
+| `./jest/**`                     | Jest configuration needed for files                                                                |
+| `src/components/**`             | Jest unit tests files in component                                                                 |
 
 ## Contributor
 
 [Quentin](https://github.com/quentinlao/)
+[Alan](https://github.com/alanlachkar)
 
 ### License
+
+[MIT](https://opensource.org/licenses/MIT)
