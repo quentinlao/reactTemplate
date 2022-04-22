@@ -9,8 +9,5 @@ module.exports = {
         ],
         '@babel/preset-typescript',
     ],
-    plugins: [
-        ['@babel/plugin-proposal-class-properties', {}],
-        ['istanbul', {}, 'plugin for Cypress instrumentation'],
-    ],
+    plugins: [['istanbul', {}, 'plugin for Cypress instrumentation']],
 };
