@@ -11,7 +11,7 @@ React template is a template use to create a react app from scratch without CRA.
 
 React template is designed for minimum configuration and **you can use all you need**:
 
--   React API 17 with Hooks [React hooks](https://fr.reactjs.org/docs/hooks-intro.html).
+-   React API 18 with Hooks [React hooks](https://fr.reactjs.org/docs/hooks-intro.html).
 -   Typescript [TS](https://www.typescriptlang.org/).
 -   Standard CSS (CSS-loader, style-loader) this project allow you to choose your standard (inline, styled-components typestyle,css modules, preprocessors SASS/LESS)
 -   Yarn package manager [yarn](https://yarnpkg.com/).
