@@ -1,5 +1,4 @@
 /// <reference types="cypress" />
-
 import { expect } from 'chai';
 
 describe('Welcoming flow', () => {
