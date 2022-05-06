@@ -18,7 +18,7 @@ COMMIT_MSG_PATH=$1
 fileContent="$(cat $COMMIT_MSG_PATH)"
 
 # Regex patterns
-regex="^feat|fix|test|doc [a-zA-Z0-9_]+"
+regex="^(feat|fix|test|doc) [a-zA-Z0-9_]+"
 
 # If file content doesn't match with regex then abort the commit
 if [[ $fileContent =~ $regex ]] 
