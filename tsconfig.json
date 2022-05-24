@@ -7,6 +7,7 @@
         "moduleResolution": "node",
         "lib": ["dom", "esnext"],
         "strict": true,
+        "noImplicitAny": true,
         "sourceMap": true,
         "target": "esnext",
         "plugins": [{ "name": "typescript-plugin-css-modules" }],
