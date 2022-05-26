@@ -17,12 +17,10 @@ export const HelloWorldPage = (): JSX.Element => {
     }, []);
 
     return (
-        <>
-            <HelloWorld
-                name="Jean"
-                title={data.title}
-                description={data.description}
-            />
-        </>
+        <HelloWorld
+            name="Jean"
+            title={data.title}
+            description={data.description}
+        />
     );
 };

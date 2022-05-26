@@ -35,7 +35,18 @@ module.exports = {
             },
             {
                 test: /\.css$/,
-                use: [{ loader: 'style-loader' }, { loader: 'css-loader' }],
+                use: [
+                    { loader: 'style-loader' },
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            modules: {
+                                localIdentName:
+                                    '[name]_[local]_[hash:base64:5]',
+                            },
+                        },
+                    },
+                ],
             },
             {
                 test: /\.(gif|svg|jpg|png)$/,
