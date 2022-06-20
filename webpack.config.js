@@ -1,6 +1,9 @@
 const path = require('path');
 
 const HtmlWebPackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const OptimizeCssAssetsWepackPlugin = require('optimize-css-assets-webpack-plugin');
+const BabelMinifyWebpackPlugin = require('babel-minify-webpack-plugin');
 
 require('dotenv').config();
 
@@ -36,7 +39,7 @@ module.exports = {
             {
                 test: /\.css$/,
                 use: [
-                    { loader: 'style-loader' },
+                    { loader: MiniCssExtractPlugin.loader },
                     {
                         loader: 'css-loader',
                         options: {
@@ -58,7 +61,12 @@ module.exports = {
         extensions: ['.ts', '.tsx', '.js', '.json'],
     },
 
-    plugins: [htmlPlugin],
+    plugins: [
+        htmlPlugin,
+        new MiniCssExtractPlugin(),
+        new OptimizeCssAssetsWepackPlugin(),
+        new BabelMinifyWebpackPlugin(),
+    ],
     output: {
         path: path.resolve(__dirname, 'build'),
         publicPath: '/',
