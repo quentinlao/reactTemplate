@@ -1,4 +1,4 @@
-import './HelloWorld.css';
+import styles from './HelloWorld.css';
 import logo from '../../assets/react.svg';
 import { HelloWorldInterface } from '../../types';
 
@@ -11,7 +11,7 @@ interface HelloWorldProps extends HelloWorldInterface {
 export const HelloWorld = (props: HelloWorldProps): JSX.Element => {
     const { name, title, description } = props;
     return (
-        <div id={HELLO_WORLD_ID} className="helloWorldContainer">
+        <div id={HELLO_WORLD_ID} className={styles.helloWorldContainer}>
             <img src={logo} height="100" />
             <h1>
                 {title}, {name} !
