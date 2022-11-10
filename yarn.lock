@@ -346,6 +346,11 @@
     chalk "^2.0.0"
     js-tokens "^4.0.0"
 
+"@babel/parser@7.13.0":
+  version "7.13.0"
+  resolved "https://registry.yarnpkg.com/@babel/parser/-/parser-7.13.0.tgz#49b9b6ee213e5634fa80361dae139effef893f78"
+  integrity sha512-w80kxEMFhE3wjMOQkfdTvv0CSdRSJZptIlLhU4eU/coNJeWjduspUFz+IRnBbAq6m5XYBFMoT1TNkk9K9yf10g==
+
 "@babel/parser@^7.1.0", "@babel/parser@^7.14.7", "@babel/parser@^7.18.10", "@babel/parser@^7.20.1", "@babel/parser@^7.20.2", "@babel/parser@^7.4.3":
   version "7.20.3"
   resolved "https://registry.yarnpkg.com/@babel/parser/-/parser-7.20.3.tgz#5358cf62e380cf69efcb87a7bb922ff88bfac6e2"
@@ -1138,11 +1143,12 @@
     tunnel-agent "^0.6.0"
     uuid "^8.3.2"
 
-"@cypress/webpack-preprocessor@^5.11.0", "@cypress/webpack-preprocessor@^5.15.4":
-  version "5.15.4"
-  resolved "https://registry.yarnpkg.com/@cypress/webpack-preprocessor/-/webpack-preprocessor-5.15.4.tgz#ea8187272202ef232eb2a51fa757bd237cac798b"
-  integrity sha512-spqrTlso5AC4tGET/bsgpC5aUiyZkPVi+aZnmg0xEvTdD/5QXRe3Tyh8t92en6rcJVzlc4PqLkZqDZEYySYyZQ==
+"@cypress/webpack-preprocessor@^5.11.0", "@cypress/webpack-preprocessor@^5.15.5":
+  version "5.15.5"
+  resolved "https://registry.yarnpkg.com/@cypress/webpack-preprocessor/-/webpack-preprocessor-5.15.5.tgz#965940014e0a72366be451d8bb7efc1f46b8a713"
+  integrity sha512-ZV2ZylabogNDK3+xwDIWswudCJMFDT9XU6tTGni2xWow/brBvI55sEqcjvb6+9x8skMSPM6vLxdvf/FAOmNEFQ==
   dependencies:
+    "@babel/parser" "7.13.0"
     bluebird "3.7.1"
     debug "^4.3.2"
     fs-extra "^10.1.0"
