@@ -30,7 +30,7 @@
         "babel-plugin-istanbul": "^6.1.1",
         "babel-preset-react": "^6.24.1",
         "chai": "^4.3.7",
-        "css-loader": "^6.5.1",
+        "css-loader": "^6.7.2",
         "cypress": "11.0.1",
         "dotenv": "^16.0.3",
         "eslint": "^8.27.0",
