@@ -1138,10 +1138,10 @@
     tunnel-agent "^0.6.0"
     uuid "^8.3.2"
 
-"@cypress/webpack-preprocessor@^5.11.0", "@cypress/webpack-preprocessor@^5.15.7":
-  version "5.15.7"
-  resolved "https://registry.yarnpkg.com/@cypress/webpack-preprocessor/-/webpack-preprocessor-5.15.7.tgz#77f89aa9039dd29839a6de431ed5e458a57a9ce5"
-  integrity sha512-fXlwoD6XrgKYgOCQuj8EJm4yekV2mba3yz7WwlYnlt4BRSUqD03kUkxZxkChRm1YqdS8IB89x9EycU9Ew5kLYA==
+"@cypress/webpack-preprocessor@^5.11.0", "@cypress/webpack-preprocessor@^5.16.0":
+  version "5.16.0"
+  resolved "https://registry.yarnpkg.com/@cypress/webpack-preprocessor/-/webpack-preprocessor-5.16.0.tgz#68dbd8ba0fb4d14e8f3d346fa31a567617a5134d"
+  integrity sha512-cQM0pPMZ/3DjA8ohFL5vBOrkD7CCpk7nH8k0ML4pLJrN6WDeIHRWuFQRISZoNXom4KP2M0kJNxJ7fCV7EbOYIg==
   dependencies:
     "@babel/core" "^7.0.1"
     "@babel/generator" "^7.17.9"
