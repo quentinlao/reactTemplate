@@ -48,7 +48,7 @@
     "dependencies": {
         "@types/react": "^18.0.27",
         "@types/react-dom": "^18.0.10",
-        "axios": "^1.2.5",
+        "axios": "^1.2.6",
         "file-loader": "^6.2.0",
         "jest-environment-jsdom": "^29.4.1",
         "react": "^18.2.0",
