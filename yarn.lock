@@ -1144,17 +1144,17 @@
     tunnel-agent "^0.6.0"
     uuid "^8.3.2"
 
-"@cypress/webpack-preprocessor@^5.11.0", "@cypress/webpack-preprocessor@^5.16.2":
-  version "5.16.2"
-  resolved "https://registry.yarnpkg.com/@cypress/webpack-preprocessor/-/webpack-preprocessor-5.16.2.tgz#2c4704b818c39008e5e61353e6a45400d3375647"
-  integrity sha512-C24bpNzRtrV6VhEsmn378Ww/FuhgIULYwYv3NdU0/umA2NuvX/QCGOS61GZu3WS3+6ZQEb6hFtnyQCxpS0CL0Q==
+"@cypress/webpack-preprocessor@^5.11.0", "@cypress/webpack-preprocessor@^5.16.3":
+  version "5.16.3"
+  resolved "https://registry.yarnpkg.com/@cypress/webpack-preprocessor/-/webpack-preprocessor-5.16.3.tgz#a74a76de8558ed080feffe1c8fea3ed25fb9b200"
+  integrity sha512-juGT69ak9iShluyZYmjQnoKV3+ixIXpf/e/TdgB6qoueZHVLQbsqBDEwGsssq5juHhR8v//E4Drwfh0eYLWRNg==
   dependencies:
     "@babel/core" "^7.0.1"
     "@babel/generator" "^7.17.9"
     "@babel/parser" "^7.13.0"
     "@babel/traverse" "^7.17.9"
     bluebird "3.7.1"
-    debug "^4.3.2"
+    debug "^4.3.4"
     fs-extra "^10.1.0"
     loader-utils "^2.0.0"
     lodash "^4.17.20"
