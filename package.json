@@ -50,7 +50,7 @@
         "@types/react-dom": "^18.0.10",
         "axios": "^1.3.3",
         "file-loader": "^6.2.0",
-        "jest-environment-jsdom": "^29.4.2",
+        "jest-environment-jsdom": "^29.4.3",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
         "typescript": "^4.9.5"
