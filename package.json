@@ -17,7 +17,7 @@
         "@babel/preset-typescript": "^7.22.11",
         "@babel/plugin-transform-runtime": "^7.22.10",
         "@cypress/code-coverage": "^3.11.0",
-        "@cypress/webpack-preprocessor": "^5.17.1",
+        "@cypress/webpack-preprocessor": "^6.0.0",
         "@istanbuljs/nyc-config-typescript": "^1.0.2",
         "@testing-library/jest-dom": "^6.1.2",
         "@testing-library/react": "^14.0.0",
