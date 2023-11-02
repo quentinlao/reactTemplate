@@ -1230,10 +1230,10 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
-"@cypress/code-coverage@^3.12.7":
-  version "3.12.7"
-  resolved "https://registry.yarnpkg.com/@cypress/code-coverage/-/code-coverage-3.12.7.tgz#5950a5a461dc92dab385d16193901a4f8483e618"
-  integrity sha512-gVC92gDM1bT5EtF5eKLlJ4cJSv7+JdgEpDu35pNuHdBJGcFk8A+iaFoa23y/RjBLzYdEVm9yCkf8GNnJNgW9jQ==
+"@cypress/code-coverage@^3.12.8":
+  version "3.12.8"
+  resolved "https://registry.yarnpkg.com/@cypress/code-coverage/-/code-coverage-3.12.8.tgz#e487bc52f5265382e62f3b4a0854a19ea2c4f75b"
+  integrity sha512-SqS4Bjgff7CoUiYBQkpfcnD7cd4DBmrlKb8APuQ1yljG1FHgffrCGM8p7/7jZfNl/Qy9dHl+nva49pTFKqrpsg==
   dependencies:
     "@cypress/webpack-preprocessor" "^6.0.0"
     chalk "4.1.2"
