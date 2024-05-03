@@ -19,7 +19,7 @@
         "@cypress/code-coverage": "^3.12.38",
         "@cypress/webpack-preprocessor": "^6.0.1",
         "@istanbuljs/nyc-config-typescript": "^1.0.2",
-        "@testing-library/jest-dom": "^6.4.2",
+        "@testing-library/jest-dom": "^6.4.5",
         "@testing-library/react": "^15.0.6",
         "@types/chai": "^4.3.15",
         "@types/jest": "^29.5.12",
