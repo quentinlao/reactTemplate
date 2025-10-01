@@ -53,7 +53,7 @@
         "jest-environment-jsdom": "^30.2.0",
         "react": "^19.1.1",
         "react-dom": "^19.1.1",
-        "typescript": "^5.9.2"
+        "typescript": "^5.9.3"
     },
     "jest": {
         "testEnvironment": "jsdom",
