@@ -33,7 +33,7 @@
         "css-loader": "^7.1.2",
         "cypress": "15.4.0",
         "dotenv": "^17.2.3",
-        "eslint": "^9.37.0",
+        "eslint": "^9.38.0",
         "eslint-plugin-react": "^7.37.5",
         "eslint-plugin-react-hooks": "^7.0.0",
         "html-webpack-plugin": "^5.6.4",
