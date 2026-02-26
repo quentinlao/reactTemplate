@@ -1174,14 +1174,14 @@
   resolved "https://registry.yarnpkg.com/@csstools/css-tokenizer/-/css-tokenizer-3.0.4.tgz#333fedabc3fd1a8e5d0100013731cf19e6a8c5d3"
   integrity sha512-Vd/9EVDiu6PPJt9yAh6roZP6El1xHrdvIVGjyBsHR0RYwNHgL7FJPyIIW4fANJNG6FtyZfvlRPpFI4ZM/lubvw==
 
-"@cypress/code-coverage@^4.0.0":
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/@cypress/code-coverage/-/code-coverage-4.0.0.tgz#9db170f494184d7278b8768d8e628de7821a4aae"
-  integrity sha512-f91ZfRfblyUudFA2nu0Z0ZTmza/QGkDCwdbQoO8zEpAjq2laRysWHn8nqM/9dOeJjH5oGnd0sYdqaGe5G1yxBw==
+"@cypress/code-coverage@^4.0.1":
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/@cypress/code-coverage/-/code-coverage-4.0.1.tgz#a7988e64be7d2e2d0d5527ecc95ee4917f20780e"
+  integrity sha512-t0XT8bfAZycb5mQtgqD1VyeriBH6vIbRBX/UvoxZVww/0mUX3O7b+8Xv4WEJ3hpCSzQayv11V0qGarole67C8Q==
   dependencies:
     "@cypress/webpack-preprocessor" "^6.0.0"
     chalk "4.1.2"
-    dayjs "1.11.13"
+    dayjs "1.11.19"
     debug "4.4.0"
     execa "4.1.0"
     istanbul-lib-coverage "^3.0.0"
@@ -3911,10 +3911,10 @@ data-view-byte-offset@^1.0.1:
     es-errors "^1.3.0"
     is-data-view "^1.0.1"
 
-dayjs@1.11.13, dayjs@^1.10.4:
-  version "1.11.13"
-  resolved "https://registry.yarnpkg.com/dayjs/-/dayjs-1.11.13.tgz#92430b0139055c3ebb60150aa13e860a4b5a366c"
-  integrity sha512-oaMBel6gjolK862uaPQOVTA7q3TZhuSvuMQAAglQDOWYO9A91IrAOUJEyKVlqJlHE0vq5p5UXxzdPfMH/x6xNg==
+dayjs@1.11.19, dayjs@^1.10.4:
+  version "1.11.19"
+  resolved "https://registry.yarnpkg.com/dayjs/-/dayjs-1.11.19.tgz#15dc98e854bb43917f12021806af897c58ae2938"
+  integrity sha512-t5EcLVS6QPBNqM2z8fakk/NKel+Xzshgt8FFKAn+qwlD1pzZWxh0nVCrvFK7ZDb6XucZeF9z8C7CBWTRIVApAw==
 
 debug@2.6.9:
   version "2.6.9"
