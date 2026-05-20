@@ -46,7 +46,7 @@
         "webpack-dev-server": "^5.2.4"
     },
     "dependencies": {
-        "@types/react": "^19.2.14",
+        "@types/react": "^19.2.15",
         "@types/react-dom": "^19.2.3",
         "axios": "^1.16.1",
         "file-loader": "^6.2.0",
