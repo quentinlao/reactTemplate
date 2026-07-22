@@ -52,7 +52,7 @@
         "file-loader": "^6.2.0",
         "jest-environment-jsdom": "^30.4.1",
         "react": "^19.2.8",
-        "react-dom": "^19.2.7",
+        "react-dom": "^19.2.8",
         "typescript": "^6.0.3"
     },
     "jest": {
