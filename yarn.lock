@@ -1192,10 +1192,10 @@
     lodash "^4.17.20"
     semver "^7.3.2"
 
-"@cypress/webpack-preprocessor@^7.1.2":
-  version "7.1.2"
-  resolved "https://registry.yarnpkg.com/@cypress/webpack-preprocessor/-/webpack-preprocessor-7.1.2.tgz#99274492def528cc434c7396626f561c97eeb473"
-  integrity sha512-YrdjJ7CvQ8pcJbSox4drHngSBZFZl7I3w7FKW3dVbhVEcORdtUeSIkpA0iD+Mzu1MeFOlqeikHc0pmTOLetPSg==
+"@cypress/webpack-preprocessor@^8.0.0":
+  version "8.0.0"
+  resolved "https://registry.yarnpkg.com/@cypress/webpack-preprocessor/-/webpack-preprocessor-8.0.0.tgz#843f46fcc36da62f95de67244d2d6974bcf7ca47"
+  integrity sha512-wbKJPC+UsPGrzFgM7M4g2EKDdGDSwZGYVfeJzZaeH77B0hRQYb/fjXmHX508nCYAlUny8527FAZd9Zx3W3aNiw==
   dependencies:
     bluebird "3.7.1"
     debug "^4.3.4"
