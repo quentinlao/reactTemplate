@@ -39,7 +39,7 @@
         "html-webpack-plugin": "^5.6.8",
         "jest": "^30.5.1",
         "nyc": "^18.0.0",
-        "prettier": "3.9.6",
+        "prettier": "3.9.8",
         "style-loader": "^4.0.0",
         "webpack": "^5.111.0",
         "webpack-cli": "^7.2.3",
