@@ -1144,10 +1144,10 @@
   resolved "https://registry.yarnpkg.com/@csstools/css-tokenizer/-/css-tokenizer-3.0.4.tgz#333fedabc3fd1a8e5d0100013731cf19e6a8c5d3"
   integrity sha512-Vd/9EVDiu6PPJt9yAh6roZP6El1xHrdvIVGjyBsHR0RYwNHgL7FJPyIIW4fANJNG6FtyZfvlRPpFI4ZM/lubvw==
 
-"@cypress/code-coverage@^4.1.1":
-  version "4.1.1"
-  resolved "https://registry.yarnpkg.com/@cypress/code-coverage/-/code-coverage-4.1.1.tgz#f252b92c76634c557770500031f96cfa9ba3f735"
-  integrity sha512-8trUFUo4VJs5sgXOyaqn+Siv/le/goDBUnrJSmBNqW605IMWaGOeSWGxwkxFKSE5TuUCO/8nt53aXP+D1LbkXA==
+"@cypress/code-coverage@^4.1.2":
+  version "4.1.2"
+  resolved "https://registry.yarnpkg.com/@cypress/code-coverage/-/code-coverage-4.1.2.tgz#41086fa1c7a40cb436b10fcea09e8610fac841c6"
+  integrity sha512-jx9ttv1DZ5L5lDaGNWdAgu1eCrQ68BKa6JzVm7oAemqsGUZXAtmV+D+CuHtYcng8San4UUXfdps+Ozhd9HAqag==
   dependencies:
     "@cypress/webpack-preprocessor" "^6.0.0"
     chalk "4.1.2"
